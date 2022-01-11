@@ -36,12 +36,28 @@ html{background-color:#FFF}
 .input_full_size_fix{width:101%}
 .button{border:1px solid transparent;border-radius:5px;font-weight:700;padding:0 11px;height:29px;cursor:pointer;user-select:none}
 .button_green{background-color:#607d8b;color:#FFF!important;transition:background .14s ease}
-.form__message{padding:7px;min-height:41px;border-radius:5px}
-.form__message_error{background-color:#F8D8DA;border:1px solid #EFD3D8}
-.form__message_error .form__message_icon{background-image:url(/images/icons/warning_small.png);width:24px;height:24px}
-.form__message__body{margin-left:24px;padding-left:9px}
-.form__message__body_title{font-weight:700}
-.form__message_error .form__message_icon{background-image:url(/images/icons/warning_small.png);width:24px;height:24px;float:left}
-.form__message_info .form__message_icon{background-image:url(/images/icons/information-outline.png);width:24px;height:24px;float:left}
+
 .icon{display:inline-block;position:relative;width:15px;height:15px;background-repeat:no-repeat}
 .footer{text-align: center;border-top:1px solid #DDD;padding:14px 0}
+
+
+
+
+
+
+
+
+.form__message_error{background-color:#F7D7DA;border:1px solid #E1CED0}
+.form__message_title{font-weight: bold;}
+.form__message{padding:7px 11px;border-radius:5px}
+
+
+.form__block{width:301px;margin:0 auto;border:1px solid #DDD;padding:24px 24px;border-radius:7px;background-color:#FFF;}
+  .input_wrap{margin:21px 0;}
+  .restore__link{float: right;}
+.form__variant_wrap{text-align: center;border-bottom:1px solid #DDD;margin-bottom:24px;margin-top:-15px}
+.form__variant_text{position: relative;top:7px; padding:7px;background-color: #FFF}
+
+
+
+.form_wrap{padding:94px 0;background-color:#FEFEFE}

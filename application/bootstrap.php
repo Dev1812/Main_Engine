@@ -13,8 +13,6 @@
   require_once SITE_ROOT.'application/core/security.php';
   require_once SITE_ROOT.'application/core/captcha.php';
   require_once SITE_ROOT.'application/core/mail.php';
-  require_once SITE_ROOT.'application/core/likes.php';
-  require_once SITE_ROOT.'application/core/dis_likes.php';
   Route::start();
   
 ?>

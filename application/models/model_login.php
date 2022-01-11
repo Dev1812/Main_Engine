@@ -65,7 +65,6 @@ public function login($email, $password) {
   $_SESSION['user_id'] = $row1['id'];
   $_SESSION['user_first_name'] = $row1['first_name'];
   $_SESSION['user_last_name'] = $row1['last_name'];
-
     header('Location: /');
 
 

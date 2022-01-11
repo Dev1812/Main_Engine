@@ -1,104 +1,56 @@
+<div id="login_page" class="form_wrap">
+
+
 <style type="text/css">
-
+.form__is_registered{padding-bottom:14px;}
+.input_wrap__is_registered{text-align: center;}
+  .input_wrap__is_registered_link{text-align: center;}
 </style>
+<div class="form__block">
+  <div class="form__title">Восстановление пароля</div>
+
+
 
 <?php
-//var_dump($data);  
-?>
-<div id="restore_page" style="background-color:#FEFEFE;">
-<div class="restore_page__wrap">
-<div class="form">
 
-<div class="form_wrap form_wrap_2<?php if(!empty($data['restore_messages']) && $data['restore_messages']['is_error'] === true) {echo ' form__error_animation';} ?>">
-
-<div class="form__title">Восстановлеие пароля</div>
-<div class="form__body">
-
-<FORM action="" method="POST">
-
-<?php
 if(!empty($data['restore_messages'])) {
 if($data['restore_messages']['is_error'] === true) {
-
 ?>
-
-
-<div class="form__message form__message_error form__message_restore">
-  <div class="form__message_icon_wrap fl_l">
-    <i class="icon form__message_icon"></i>
-  </div>  
-
-  <div class="form__message__body">
-    <div class="form__message__body_title"><?php echo $data['restore_messages']['error']['error_message']['title'];?></div>
-    <div class="form__message__body_content"> <?php echo $data['restore_messages']['error']['error_message']['description'];?></div>
+  <div class="form__message form__message_error">
+      <div class="form__message_title"><?php echo $data['restore_messages']['error']['error_message']['title'];?></div>
+      <div class="form__message_body"><?php echo $data['restore_messages']['error']['error_message']['description'];?></div>
   </div>
-</div>
-<?php
 
-}
-} else {
-
-?>
-
-<div class="form__message form__message_info form__message_restore">
-  <div class="form__message_icon_wrap fl_l">
-    <i class="icon form__message_icon"></i>
-  </div>  
-
-  <div class="form__message__body">
-    <div class="form__message__body_title">Введите данные в поля ниже</div>
-    <div class="form__message__body_content">Для входа введите данные в поля ниже</div>
-  </div>
-</div>
 <?php
 }
-
-
+}
 ?>
-.input_wrap_2{margin-top:7px}
-<div class="input_wrap_2">
 
 
-<div class="form__item_wrap">
+
+  <div class="form__body">
+    <FORM action="" method="POST">
+    <div class="input_wrap">
+      <input type="text" name="restore_email_0" class="text_field" placeholder="Ваш email" autofocus="">
+    </div>
+    <div class="input_wrap">
+      <input type="submit" name="restore_submit_0" class="button button_green percent_100" value="Восстановить">
+    </div>
+  </FORM>
+  </div>
+  <div class="form__variant_wrap">
+    <span class="form__variant_text">или</span>
+  </div>
+  <div class="input_wrap input_wrap__is_registered">
+      <a href="/restore" class="form__is_registered"><span style="color:#000;">Уже Зарегестрированы?</span> Вход</a>
+
+    </div>
   <div class="input_wrap">
-    <input type="text" name="restore_email_0" placeholder="Ваш email" class="text_field percent_100" autofocus="">
+    <a href="/reg">
+      <button name="" class="button percent_100">Регистрация</button>
+    </a>
   </div>
 </div>
 
 
-
-
-
-<div class="form__item_wrap">
-
-<input type="submit" name="restore_submit_0" class="button button_green percent_100" value="Восстановить пароль">
-
-</div>
-
-</FORM>
-<div class="go_to__restore_page_wrap">
-  <div class="go_to__restore_page_wrap2"><span class="go_to__restore_page_or">или</span></div>
-
-</div>
-
-
-
-
-<div class="form__item_wrap">
-
-<a href="/login"><button class="button button_gray percent_100 input_full_size_fix">Вход</button></a>
-
-</div>
-</div>
-
-
-
-</div>
-
-
-</div>
-
-
-</div>
-</div>
 </div>

@@ -16,7 +16,7 @@ class Controller_Not_Found extends Controller {
   public function action_index() {
     $data = array();
     $param = array();//task_id
-    $param['css'] = '404_not_found.css';
+    $param['css'] = 'not_found.css';
     $param['page_title'] = 'Страница не найдена | '.SITE_NAME;
     $this->view->generate('/errors/404_view.php', '/templates/template_view.php', $param, $data, null);
   }

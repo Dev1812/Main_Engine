@@ -16,9 +16,7 @@ class Controller_Restore extends Controller {
 
     $this->view = new View;
     $this->model = new Model_Restore;
-
-    //header('Location: /tasks');
-}
+  }
 
   public function action_index() {
     $data = array();
@@ -30,7 +28,9 @@ class Controller_Restore extends Controller {
     $this->view->generate('restore/restore_view.php', '/templates/template_view.php', $param, $data, null);
   }
 
-
+/**
+ * Сюда отправляется пользователь из письма Email
+ */
 
   public function action_r() {
     $data = array();

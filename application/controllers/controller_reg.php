@@ -24,11 +24,7 @@ class Controller_Reg extends Controller {
     $param['css'] = 'reg.css';
     $param['page_title'] = 'Регистрация | '.SITE_NAME;
     if(isset($_POST['reg_submit_0']) && !empty($_POST['reg_submit_0'])) {
-      $p = $_POST;
-      $data['reg_messages'] = $this->model->reg($p['reg_first_name_0'],
-                                                $p['reg_last_name_0'],
-                                                $p['reg_email_0'],
-                                                $p['reg_password_0']);
+      $data['reg_messages'] = $this->model->reg($_POST['reg_first_name_0'], $_POST['reg_last_name_0'], $_POST['reg_email_0'], $_POST['reg_password_0']);
     }
     $this->view->generate('reg/reg_view.php', '/templates/template_view.php', $param, $data, null);
   }
