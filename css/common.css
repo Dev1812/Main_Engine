@@ -44,3 +44,4 @@ html{background-color:#FFF}
 .form__message_error .form__message_icon{background-image:url(/images/icons/warning_small.png);width:24px;height:24px;float:left}
 .form__message_info .form__message_icon{background-image:url(/images/icons/information-outline.png);width:24px;height:24px;float:left}
 .icon{display:inline-block;position:relative;width:15px;height:15px;background-repeat:no-repeat}
+.footer{text-align: center;border-top:1px solid #DDD;padding:14px 0}

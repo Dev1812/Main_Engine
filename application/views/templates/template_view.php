@@ -101,22 +101,11 @@ if(!empty($param['css'])) {
     echo '...';
   }
 ?>
-
-
-
-
 </div>
-<div class="footer" style="text-align: center;border-top:1px solid #DDD;padding:14px 0">
-  Test &copy; 2022
-</div>
+<div class="footer">Test &copy; 2022</div>
 </div>
 
 </div>
-
-
-
 
 </body>
-
-
 </html>

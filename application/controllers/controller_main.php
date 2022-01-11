@@ -15,14 +15,8 @@ class Controller_Main extends Controller {
   public function action_index() {
     $data = array();
     $param = array();
-    $param['css'] = 'login.css';
     $param['page_title'] = 'Вход | '.SITE_NAME;
-
     $this->view->generate('main/main_view.php', '/templates/template_view.php', $param, $data, null);
   }
-
-
-
-
 
 }

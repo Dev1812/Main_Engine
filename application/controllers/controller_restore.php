@@ -23,7 +23,7 @@ class Controller_Restore extends Controller {
   public function action_index() {
     $data = array();
     $param = array();
-   // $param['css'] = 'reg.css';
+    $param['css'] = 'restore.css';
     if(!empty($_POST['restore_submit_0'])) {
       $data['restore_messages'] = $this->model->restore($_POST['restore_email_0']);
     }
@@ -35,7 +35,7 @@ class Controller_Restore extends Controller {
   public function action_r() {
     $data = array();
     $param = array();
-   // $param['css'] = 'reg.css';
+    $param['css'] = 'restore.css';
     if(!empty($_GET['restore_submit_0'])) {
       $data['restore'] = $this->model->r($_GET['restore_email_0']);
     }

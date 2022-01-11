@@ -12,7 +12,6 @@ class Controller_Login extends Controller {
     if(User::isAuth()) {
       header('Location: /');
     }
-
     $this->view = new View;
     $this->model = new Model_Login;
   }
@@ -22,25 +21,12 @@ class Controller_Login extends Controller {
     $param = array();
     $param['css'] = 'login.css';
     $param['page_title'] = 'Вход | '.SITE_NAME;
-
-
-
-
-
     if(isset($_POST['login_submit_0']) && !empty($_POST['login_submit_0'])) {
       $p = $_POST;
       $data['login_messages'] = $this->model->login(
                                                 $p['login_email_0'],
                                                 $p['login_password_0']);
     }
-
-
-
-
-
-
-
-
     $this->view->generate('login/login_view.php', '/templates/template_view.php', $param, $data, null);
   }
 

@@ -1,15 +1,5 @@
 <style type="text/css">
 
-.go_to__restore_page_wrap{border-top:1px solid #DDD;margin:14px 0 11px}
-
-.go_to__restore_page_wrap2{text-align: center;margin-top:-11px}
-
-.go_to__restore_page_or{background-color:#FFF;padding:0 5px}
-
-
-
-
-
 </style>
 
 <?php
@@ -18,32 +8,13 @@
 <div id="restore_page" style="background-color:#FEFEFE;">
 <div class="restore_page__wrap">
 <div class="form">
-<style type="text/css">
-.restore_page__wrap {
-    padding: 77px 0;
-}
-</style>
-<div class="form_wrap<?php if(!empty($data['restore_messages']) && $data['restore_messages']['is_error'] === true) {echo ' form__error_animation';} ?>" style="width:240px;margin:0 auto;    width: 383px;
-    margin: 0 auto;
-    border: 1px solid #DDD;
-    padding: 52px 34px;
-    border-radius: 7px;background-color:#FFF">
+
+<div class="form_wrap form_wrap_2<?php if(!empty($data['restore_messages']) && $data['restore_messages']['is_error'] === true) {echo ' form__error_animation';} ?>">
 
 <div class="form__title">Восстановлеие пароля</div>
 <div class="form__body">
 
 <FORM action="" method="POST">
-
-
-
-
-
-
-
-
-
-
-
 
 <?php
 if(!empty($data['restore_messages'])) {
@@ -65,12 +36,11 @@ if($data['restore_messages']['is_error'] === true) {
 <?php
 
 }
-} else {//88CEF7
+} else {
 
 ?>
 
-
-<div class="form__message form__message_info form__message_restore" style="background-color: #B2E7F5;color:#000;padding:7px;line-height:24px">
+<div class="form__message form__message_info form__message_restore">
   <div class="form__message_icon_wrap fl_l">
     <i class="icon form__message_icon"></i>
   </div>  
@@ -85,8 +55,8 @@ if($data['restore_messages']['is_error'] === true) {
 
 
 ?>
-
-<div style="margin-top:7px">
+.input_wrap_2{margin-top:7px}
+<div class="input_wrap_2">
 
 
 <div class="form__item_wrap">

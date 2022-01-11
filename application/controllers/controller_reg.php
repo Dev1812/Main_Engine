@@ -11,7 +11,7 @@ class Controller_Reg extends Controller {
   public function __construct() {
 
     if(User::isAuth()) {
-      //header('Location: /');
+      header('Location: /');
     }
 
     $this->view = new View;

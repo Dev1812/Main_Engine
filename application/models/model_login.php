@@ -66,25 +66,9 @@ public function login($email, $password) {
   $_SESSION['user_first_name'] = $row1['first_name'];
   $_SESSION['user_last_name'] = $row1['last_name'];
 
-/*
-  $is_admin = false;
-
-  if(isset($row['is_admin']) && !empty($row['is_admin'])) {
-    if($row['is_admin'] != '0') {
-     $is_admin = true;
-    }
-  }
-  if( isset($row1['id']) && !empty($row1['id']) ) {
-    $_SESSION['user_id'] = $row1['id'];
-    $_SESSION['is_admin'] = $is_admin;
-    header('Location: /learn');
-  } */
- //} else {
-
-
     header('Location: /');
 
- // }
+
  
 } 
 

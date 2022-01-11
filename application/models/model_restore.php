@@ -111,7 +111,6 @@ public function restore($email) {
   $is_email_exist->execute(array(':email' => $email));
   $row2 = $is_email_exist->fetch(PDO::FETCH_ASSOC);
 
-var_export($row2);
   if(empty($row2['id'])) {
 
 
