@@ -1,0 +1,46 @@
+@font-face{font-family:Myriad_set_pro_Text;src:local(Myriad_set_pro_Text),url(../fonts/myriad-set-pro_text.woff)}
+*{box-sizing:border-box;font-size:.997em;font-family:"Myriad_set_pro_Text","SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif}
+html,body{margin:0}
+a{text-decoration:none;color:#316da9}
+.clear{clear:both}
+.fl_l{float:left}
+.fl_r{float:right}
+.text_field:focus{-webkit-appearance:none;border-color:#0070c9;outline:0;box-shadow:0 0 0 3px #83c0fd80;padding-left:13px}
+.percent_100{width:100%}
+html{background-color:#FFF}
+.head{background-color:#267abd;height:47px}
+.head .head__wrap{width:940px;margin:auto;position:relative}
+.head .head__wrap .head__link{color:#FFF;float:left;padding:14px;transition:background .14s ease}
+.head .head__wrap .head__link:hover{background-color:#2a6595}
+.head .head__wrap .head__right{float:right}
+.head .head__wrap .head__left{float:left}
+.head__categories{background-color:#EEE;text-align:center;height:39px}
+.head__categories .head__wrap .head__link{color:gray;float:none;display:inline-block;padding:10px 14px}
+.head__categories .head__wrap .head__link:hover{background-color:#DFDFDF}
+.text_field{border:1px solid #BFBFBF;width:100%;height:21px;line-height:21px;padding:14px;border-radius:4px}
+.head__link__icon{padding:15px 14px 11px!important}
+.textarea{height:74px}
+.head__search_field::-webkit-input-placeholder{color:#E1E1E1}
+.head__search_field:-ms-input-placeholder{color:#E1E1E1}
+.head__search_field::-moz-placeholder{color:#E1E1E1;opacity:1}
+.head__search_field:-moz-placeholder{color:#E1E1E1;opacity:1}
+.head .head__wrap .head__search_field{border:1px solid #40434e4f!important;background-color:#426d8f;color:#000;background-repeat:no-repeat;background-position:7px 5px;padding-left:31px!important;text-align:left;background-image:url(/images/icons/magnify.png)}
+.head .head__wrap .head__search_field:focus{border:1px solid #000!important;outline:none;box-shadow:0 0 5px #000}
+.head .head__wrap .head__search_field__wrap{width:210px;margin-left:140px;display:nonce}
+.head .head__wrap .head__search_field__wrap_2{padding-top:9px}
+.form__item_wrap{padding:7px 0}
+.form__title{text-align:center;font-size:24px;margin-bottom:21px;font-weight:700}
+.login_page__wrap{padding:77px 0}
+.label{margin-bottom:7px}
+.form__desc{text-align:center;color:gray;padding:5px 0 9px}
+.input_full_size_fix{width:101%}
+.button{border:1px solid transparent;border-radius:5px;font-weight:700;padding:0 11px;height:29px;cursor:pointer;user-select:none}
+.button_green{background-color:#607d8b;color:#FFF!important;transition:background .14s ease}
+.form__message{padding:7px;min-height:41px;border-radius:5px}
+.form__message_error{background-color:#F8D8DA;border:1px solid #EFD3D8}
+.form__message_error .form__message_icon{background-image:url(/images/icons/warning_small.png);width:24px;height:24px}
+.form__message__body{margin-left:24px;padding-left:9px}
+.form__message__body_title{font-weight:700}
+.form__message_error .form__message_icon{background-image:url(/images/icons/warning_small.png);width:24px;height:24px;float:left}
+.form__message_info .form__message_icon{background-image:url(/images/icons/information-outline.png);width:24px;height:24px;float:left}
+.icon{display:inline-block;position:relative;width:15px;height:15px;background-repeat:no-repeat}
