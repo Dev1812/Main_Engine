@@ -53,23 +53,16 @@ public function login($email, $password) {
   $is_email_exist = $this->database->prepare("SELECT `id`, `first_name`, `last_name`, `email`, `hashed_password`,`salt`, `user_type` FROM `users` WHERE `email` = :email");
   $is_email_exist->execute(array(':email' => $email));
   $row1 = $is_email_exist->fetch(PDO::FETCH_ASSOC);
-  //var_dump($row1);
-
-
+  
   if(!$this->crypto->checkPassword($row1['hashed_password'], $password, $row1['salt'])) {
-
     return array('is_error'=>true,'error'=>array('error_code'=>32, 'error_message'=>$this->i18n->get('incorrect_login_or_password')));
-} else {
-
-  $_SESSION['user_type'] = $row1['user_type'];
-  $_SESSION['user_id'] = $row1['id'];
-  $_SESSION['user_first_name'] = $row1['first_name'];
-  $_SESSION['user_last_name'] = $row1['last_name'];
+  } else {
+    $_SESSION['user_type'] = $row1['user_type'];
+    $_SESSION['user_id'] = $row1['id'];
+    $_SESSION['user_first_name'] = $row1['first_name'];
+    $_SESSION['user_last_name'] = $row1['last_name'];
     header('Location: /');
-
-
- 
-} 
+  } 
 
   
 }

@@ -5,22 +5,10 @@ if(!defined('SECURITY_CONST')) {
 }
 class Model_Restore extends Model {
 
-  const MAX_ROWS = 20;
-
-  const MIN_FIRSTNAME = 3;
-  const MAX_FIRSTNAME = 74;
-
-
-  const MIN_LASTNAME = 3;
-  const MAX_LASTNAME = 74;
-
-
-
   const MIN_EMAIL = 4;
   const MAX_EMAIL = 74;
 
-  const MIN_PASSWORD = 4;
-  const MAX_PASSWORD = 54;
+  const RESTORE_URL = 'http://local.1-1.io/restore/r/?token=';
 
   public $database = null;
   public $i18n = null;
@@ -30,16 +18,14 @@ class Model_Restore extends Model {
     $this->database = DataBase::connect();
     $this->i18n = new i18n;
     $this->crypto = new Crypto;
-
   }
 
 
+  public function sendRestoreMessageOnMail($hash) {
 
-public function sendRestoreMessageOnMail($hash) {
-
-$mail = new Mail;
-// От кого.
-$mail->from('cilintanoa027@gmail.com', 'tt274721@gmail.com');
+    $mail = new Mail;
+    // От кого.
+    $mail->from('timka_issaev@mail.ru');
  
  // Кому, можно указать несколько адресов через запятую.
 $mail->to('timka_issaev@mail.ru', 'Тимур');
@@ -52,9 +38,9 @@ $mail->body = '
 
 <div>
 <div style="font-weight:bold;padding-bottom:14px">Здравствуйте</div>
-<div style="padding-bottom:14px">Вы запросили восстановление пароля на сайте pumbum.ru</div>
+<div style="padding-bottom:14px">Вы запросили восстановление пароля на сайте '.SITE_NAME.'</div>
 <div style="padding-bottom:14px">Для того, чтобы восстановить пароль, нажмите на кнопку ниже.</div>
-<div style="padding-bottom:14px"><a href="http://local.1-1.io/restore/r/?token='.$hash.'"><button style="
+<div style="padding-bottom:14px"><a href="'.RESTORE_URL.$hash.'"><button style="
     border: 1px solid transparent;
     border-radius: 5px;
     font-weight: 700;
@@ -68,7 +54,7 @@ $mail->body = '
 </div>
 
 <div style="font-size:14px;color:#808080;padding-bottom:14px">Если Вы не делали запрос, просто проигнорирйте данное сообщение</div>
-<div style="font-size:15px;">С уважением, ваш Pumbum</div>
+<div style="font-size:15px;">С уважением, ваш '.SITE_NAME.'</div>
 
 ';
  
@@ -76,12 +62,6 @@ $mail->body = '
 $mail->send();
 }
 
-
-  /**
-   * @date 30 July 2018
-   * @time 13:38
-   * 
-   */
 
 public function restore($email) {
 
